@@ -153,7 +153,7 @@ body.xm{background:#2a140c;color:#fff3e6}body.ft{background:#c4521f;color:#4a1f0
 <div class="row2"><button class="sq" id="as" aria-label="Important">⭐</button><button class="addb" id="ab">Add</button></div></div>
 <div class="sr"><input id="q" placeholder="🔍 Search assignments"><div class="chips" id="chips"></div></div>
 <div class="fl" id="fl"></div><div id="list"></div></div>
-<div class="w" id="cal" hidden><div class="top"><span style="flex:1"></span><button class="ib" id="hg2" aria-label="Settings">⚙️</button></div><h1>Calendar</h1><div class="seg"><button class="f" data-v="day">Day</button><button class="f" data-v="week">Week</button><button class="f" data-v="month">Month</button><button class="f" data-n="0">Today</button></div><div class="cnv"><button class="ib" data-n="-1" aria-label="Previous">‹</button><h2 id="ct"></h2><button class="ib" data-n="1" aria-label="Next">›</button></div><div id="cn"></div><div id="cd"></div></div>
+<div class="w" id="cal" hidden><div class="top"><span style="flex:1"></span><button class="ib" id="hg2" aria-label="Settings">⚙️</button></div><h1>Calendar</h1><div class="seg"><button class="f" data-v="day">Day</button><button class="f" data-v="week">Week</button><button class="f" data-v="month">Month</button><button class="f" data-n="0">Today</button></div><div class="cnv"><button class="ib" data-n="-1" aria-label="Previous">‹</button><h2 id="ctl"></h2><button class="ib" data-n="1" aria-label="Next">›</button></div><div id="cnn"></div><div id="cdd"></div></div>
 <nav class="nav"><button class="on" data-k="0">🏠 Home</button><button data-k="1">📅 Calendar</button></nav>
 <script>
 const $=s=>document.querySelector(s),DAY=864e5;
@@ -345,13 +345,13 @@ function calRender(){const el=$('#cal');if(!el||el.hidden)return;const sel=CAL.s
  if(v==='day')title=D.toLocaleDateString([],{weekday:'long',month:'short',day:'numeric'});
  else if(v==='week'){const w0=addD(sel,-((D.getDay()+6)%7));title=f(w0)+' – '+f(addD(w0,6));nav='<div class="wk">'+[0,1,2,3,4,5,6].map(k=>dc(addD(w0,k),0,k)).join('')+'</div>'}
  else{const m=new Date(D.getFullYear(),D.getMonth(),1),g0=addD(m.getTime(),-((m.getDay()+6)%7));title=D.toLocaleDateString([],{month:'long',year:'numeric'});nav='<div class="wk mg">'+[...'MTWTFSS'].map(x=>`<div class="hd">${x}</div>`).join('')+Array.from({length:42},(_,k)=>dc(addD(g0,k),new Date(addD(g0,k)).getMonth()!==D.getMonth(),-1)).join('')+'</div>'}
- $('#ct').textContent=title;$('#cn').innerHTML=nav;$('#cd').innerHTML=dayHTML(sel)}
+ $('#ctl').textContent=title;$('#cnn').innerHTML=nav;$('#cdd').innerHTML=dayHTML(sel)}
 $('#cal').addEventListener('click',e=>{if(e.target.closest('.card')){$('#list').onclick(e);return}
  const b=e.target.closest('[data-t],[data-v],[data-n],[data-go]');if(!b)return;
  if(b.dataset.go){settings(2);return}if(b.dataset.t)CAL.sel=+b.dataset.t;else if(b.dataset.v)CAL.v=b.dataset.v;else calShift(+b.dataset.n);calRender()});
 $('#cal').onkeydown=$('#list').onkeydown;$('#cal').oninput=$('#list').oninput;
 let sx=0,sy=0;$('#cal').addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
-$('#cal').addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){calShift(dx<0?1:-1);calRender();['#cn','#cd'].forEach(s=>{const x=$(s);x.classList.remove('sl');void x.offsetWidth;x.classList.add('sl')})}},{passive:true});
+$('#cal').addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){calShift(dx<0?1:-1);calRender();['#cnn','#cdd'].forEach(s=>{const x=$(s);x.classList.remove('sl');void x.offsetWidth;x.classList.add('sl')})}},{passive:true});
 function showTab(k){$('#hm').hidden=!!k;$('#cal').hidden=!k;document.querySelectorAll('.nav button').forEach((b,j)=>b.classList.toggle('on',j===k));scrollTo(0,0);if(k)calRender()}
 document.querySelector('.nav').onclick=e=>{const b=e.target.closest('button');if(b)showTab(+b.dataset.k)};$('#hg2').onclick=()=>settings();
 function schMount(r,done,first){const s=S.sch||{blk:{}},n0=dayN(sod(Date.now()))||(s.anchor?s.anchor.n:1),N=[1,2,3,4,5,6,7];
