@@ -1,44 +1,70 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-    
-    
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  <base href="https://cdn.jsdelivr.net/gh/FunkyTimmy/UGS-Assets@main/gladihoppper/">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Gladihoppers</title>
+  <script>
+    window.alert = function() {};
+    window.confirm = function() {
+      return false;
+    };
+    window.prompt = function() {
+      return null;
+    };
+    window.fileMergerConfig = {
+      files: [{
+          name: 'Gladihoppers.data.unityweb',
+          parts: 2
+        },
+        {
+          name: 'Gladihoppers.wasm.code.unityweb',
+          parts: 2
+        },
+      ],
+      basePath: 'Build/',
+      debug: true
+    };
+  </script>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-WX5VS54ZDW');
-    </script>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Gladihoppers</title>
-    <script>
-        window.config = {
-            loader: 'unity',
-            debug: false,
-            maxRatio: 16 / 9,
-            minRatio: 9 / 16,
-            title: 'Gladihoppers',
-            thumbnail: 'https://cdn.jsdelivr.net/gh/genizy/gh/patch/png/null.png',
-            numScreenshots: 5,
-            unityVersion: '2019.3.13f1',
-            unityWebglBuildUrl: 'https://cdn.jsdelivr.net/gh/genizy/gh/Build/Gladihoppers.json',
-            fileSize: 23,
-            cachedDecompressedFileSizes: {
-                'Gladihoppers.data.unityweb': 17409938,
-                'Gladihoppers.wasm.code.unityweb': 6410659,
-                'Gladihoppers.wasm.framework.unityweb': 91463,
-            },
-        };
-    </script>
+  <script src="https://cdn.jsdelivr.net/gh/FunkyTimmy/UGS-Assets@main/merge.js"></script>
+  <script>
+    window.config = {
+      loader: 'unity',
+      debug: false,
+      maxRatio: 16 / 9,
+      minRatio: 9 / 16,
+      title: 'Gladihoppers',
+      thumbnail: 'patch/png/null.png',
+      numScreenshots: 5,
+      unityVersion: '2019.3.13f1',
+      unityWebglBuildUrl: 'Build/Gladihoppers.json',
+      fileSize: 23,
+      cachedDecompressedFileSizes: {
+        'Gladihoppers.data.unityweb': 17409938,
+        'Gladihoppers.wasm.code.unityweb': 6410659,
+        'Gladihoppers.wasm.framework.unityweb': 91463,
+      },
+    };
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    }
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "f" || e.key === "F") {
+        toggleFullscreen();
+      }
+    });
+  </script>
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/gh/genizy/gh/patch/js/poki-master-loader.js"></script>
+  <script src="patch/js/poki-master-loader.js"></script>
 </body>
 
 </html>
