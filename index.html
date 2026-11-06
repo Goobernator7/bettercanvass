@@ -143,18 +143,35 @@ body.xm{background:#2a140c;color:#fff3e6}body.ft{background:#c4521f;color:#4a1f0
 .ft .nav{background:#ffe9ccdd;border-color:#a23d1733}.ft .nav button{color:#8a5a30}.ft .nav button.on{background:#8f2410;color:#fff}
 .ft .dc{background:#fff1dccc;color:#4a1f0a}.ft .dc.sel{background:#8f2410;color:#fff}.ft .dc.td{box-shadow:inset 0 0 0 2px #e07a1c}.ft .dc i{background:#e07a1c}.ft .hd{color:#fff1dc}
 .ft .cc{background:#fff6e8ee;color:#4a1f0a}.ft .rw.now{background:#e07a1c22;box-shadow:inset 0 0 0 2px #e07a1c}
-</style></head><body><div class="w" id="hm"><div class="top"><button class="ib" id="hq" aria-label="Tour">?</button><span style="flex:1"></span><button class="ib" id="hs" aria-label="Sound">🔊</button><button class="ib" id="hg" aria-label="Settings">⚙️</button></div>
+.ic{width:20px;height:20px;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ib,.sq{display:grid;place-items:center}.ib .ic{width:18px}.act .ic{width:18px;height:18px}.act button{display:grid;place-items:center}
+.sq.on .ic,.act .st.on .ic{fill:#f2b400;stroke:#c98a00}
+.fb,.fb2,.f .ic+*{display:inline-flex;align-items:center;gap:6px}.fb .ic,.fb2 .ic{width:16px;height:16px}
+.nav button{display:flex;flex-direction:column;align-items:center;gap:2px}.nav .ic{width:22px;height:22px}
+#q{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239aa0ab' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:12px center!important;background-size:16px!important;padding-left:36px!important}
+.toast{bottom:88px}.ubb{margin-left:10px;border:0;background:#fff;color:#111;border-radius:999px;padding:4px 12px;cursor:pointer}
+.tc{transition:top .35s ease}
+.gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:14px}
+.gc{border:0;background:rgba(127,127,127,.14);color:inherit;border-radius:22px;padding:10px;cursor:pointer;text-align:center;font-size:13px}
+.gi{display:grid;place-items:center;aspect-ratio:1;border-radius:24%;overflow:hidden;background:#0002;margin-bottom:8px}.gi img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}.gph .ic{width:34px;height:34px}
+.dk .gc{background:#22252e}.xm .gc{background:#3e2014f0;color:#fff3e6}.ft .gc{background:#fff6e8ee;color:#4a1f0a}
+.gbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0}.gbar b{flex:1;min-width:80px;font-size:16px}.gbar .f{display:inline-flex;align-items:center;gap:6px;text-decoration:none}.gbar .ic{width:16px;height:16px}
+.gbox{position:relative;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:16/10;min-height:260px;width:100%;box-shadow:0 6px 24px #0003}.gbox iframe{width:100%;height:100%;border:0;display:block}
+.gbox.fs{position:fixed;inset:0;z-index:40;border-radius:0;aspect-ratio:auto;min-height:0}
+.gxb{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));right:10px;z-index:2;border:0;border-radius:999px;width:40px;height:40px;background:#000b;color:#fff;display:grid;place-items:center;cursor:pointer}.gxb[hidden]{display:none}
+</style></head><body><div class="w" id="hm"><div class="top"><button class="ib" id="hq" aria-label="Tour">?</button><span style="flex:1"></span><button class="ib" id="hs" aria-label="Sound"></button><button class="ib" id="hg" aria-label="Settings"></button></div>
 <h1 id="hi"></h1><div class="date" id="dt"></div>
 <div class="pills"><span class="pill streak" id="stk"></span><span class="pill lvl"><span id="lv"></span><span class="bar"><i id="lb"></i></span></span></div>
 <div class="stats"><div class="box g"><small>Completed</small><b id="s1">0</b></div><div class="box b"><small>This week</small><b id="s2">0</b></div><div class="box p"><small>Progress</small><b id="s3">0%</b><div class="pb"><div class="pf" id="pf" style="width:0"></div></div></div></div>
 <div class="next" id="nx"></div>
 <div class="add"><div class="row"><input id="an" placeholder="Name" maxlength="120"><select id="ac"></select><input id="ad" type="datetime-local"></div>
 <div class="row" id="nc" style="display:none;margin-top:8px"><input id="ancn" placeholder="New class name" maxlength="40"></div>
-<div class="row2"><button class="sq" id="as" aria-label="Important">⭐</button><button class="addb" id="ab">Add</button></div></div>
-<div class="sr"><input id="q" placeholder="🔍 Search assignments"><div class="chips" id="chips"></div></div>
+<div class="row2"><button class="sq" id="as" aria-label="Important"></button><button class="addb" id="ab">Add</button></div></div>
+<div class="sr"><input id="q" placeholder="Search assignments"><div class="chips" id="chips"></div></div>
 <div class="fl" id="fl"></div><div id="list"></div></div>
 <div class="w" id="cal" hidden><div class="top"><span style="flex:1"></span><button class="ib" id="hg2" aria-label="Settings">⚙️</button></div><h1>Calendar</h1><div class="seg"><button class="f" data-v="day">Day</button><button class="f" data-v="week">Week</button><button class="f" data-v="month">Month</button><button class="f" data-n="0">Today</button></div><div class="cnv"><button class="ib" data-n="-1" aria-label="Previous">‹</button><h2 id="ctl"></h2><button class="ib" data-n="1" aria-label="Next">›</button></div><div id="cnn"></div><div id="cdd"></div></div>
-<nav class="nav"><button class="on" data-k="0">🏠 Home</button><button data-k="1">📅 Calendar</button></nav>
+<div class="w" id="gm" hidden><div class="top"><span style="flex:1"></span><button class="ib" id="hg3" aria-label="Settings"></button></div><h1>Games</h1><div class="gg" id="ggl"></div><div id="gp" hidden><div class="gbar"><button class="f" id="gb"></button><b id="gt"></b><button class="f" id="gfs"></button><a class="f" id="gfp" target="_blank" rel="noopener">Full page</a></div><div class="gbox" id="gbox"><iframe id="gf" title="Game" sandbox="allow-scripts allow-pointer-lock allow-popups allow-modals allow-forms" allow="fullscreen; autoplay; gamepad" allowfullscreen></iframe><button class="gxb" id="gx" aria-label="Exit fullscreen" hidden></button></div></div></div>
+<nav class="nav"></nav>
 <script>
 const $=s=>document.querySelector(s),DAY=864e5;
 let S;try{S=JSON.parse(localStorage.getItem('hw'))}catch(e){}
@@ -210,7 +227,7 @@ function list(){
  const ck='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>';
  let h='';
  for(const k of['over','today','tmr','week','later','none'])if(g[k]){h+=`<div class="gh">${NAMES[k]} · ${g[k].length}</div>`+g[k].map(i=>{const c=cls(i.cls);return`<div class="card ${i.star?'imp':''} ${i.done?'dn':''}" data-id="${i.id}"><button class="ck ${i.done?'on':''}" data-a="t" aria-label="Complete">${ck}</button><div class="mid"><div class="nm">${esc(i.name)}</div><div class="lb">${c?`<span class="tag" style="${cs(c)}">${esc(c.name)}</span>`:''}${i.due?`<span>${fmt(i.due)}</span>`:''}</div></div><div class="act"><button class="st ${i.star?'on':''}" data-a="s" aria-label="Important">⭐</button><button data-a="x" aria-label="Delete">✕</button></div></div>`}).join('')}
- $('#list').innerHTML=h||'<div class="empty">Nothing here yet ✨</div>';
+ $('#list').innerHTML=h||'<div class="empty">Nothing here yet</div>';
 }
 function all(){head();next();ctrl();list()}
 $('#ac').onchange=e=>{$('#nc').style.display=e.target.value==='__new'?'flex':'none'};
@@ -272,17 +289,17 @@ async function api(b,cv=S.cv){const r=await fetch('/api/canvas',{method:'POST',h
 async function sync(){if(!S.cv)return;try{const d=await api({action:'items'});
  d.courses.forEach(c=>{const id='cv'+c.id;if(!cls(id))S.classes.push({id,name:c.name,h:HUES[S.classes.length%10]})});
  d.items.forEach(x=>{const id='cv'+x.pt+x.pid;if(S.hidden.includes(id))return;let i=S.items.find(y=>y.id===id);if(!i){i={id,src:'canvas',star:false,xp:0};S.items.push(i)}
-  Object.assign(i,{name:x.name,due:x.due?new Date(x.due).getTime():null,cls:'cv'+x.cid,pt:x.pt,pid:x.pid,oid:x.oid,done:x.done});if(!x.done){i.at=null;i.xp=0}});
+  Object.assign(i,i.ed?{}:{name:x.name,due:x.due?new Date(x.due).getTime():null,cls:'cv'+x.cid},{pt:x.pt,pid:x.pid,oid:x.oid,done:x.done});if(!x.done){i.at=null;i.xp=0}});
  save();all()}catch(e){toast('Canvas sync failed: '+e.message)}}
-function card(i){const c=cls(i.cls);return`<div class="card ${i.star?'imp':''} ${i.done?'dn':''}" data-id="${i.id}" style="--cc:${c?`hsl(${c.h} 70% 60%)`:'#d8dbe2'}"><button class="ck ${i.done?'on':''}" data-a="t" aria-label="Complete">${CK}</button><div class="mid"><div class="nm">${esc(i.name)}</div><div class="lb">${c?`<span class="tag" style="${cs(c)}">${esc(c.name)}</span>`:''}${i.due?`<span>${fmt(i.due)}</span>`:''}${i.src==='canvas'?'<span class="tag cv">Canvas</span>':''}</div>${i.ph?`<img class="th" data-a="v" src="${i.ph}" alt="Photo">`:''}${X[i.id]?ex(i):''}</div><div class="act"><button data-a="x" aria-label="Delete">✕</button><button data-a="p" aria-label="Photo">📷</button><button class="st ${i.star?'on':''}" data-a="s" aria-label="Important">⭐</button></div></div>`}
-const ex=i=>`<div class="ex"><div>${(i.steps||[]).map((s,k)=>`<div class="sp"><button class="ck sm ${s.d?'on':''}" data-a="sc" data-k="${k}">${CK}</button><span class="${s.d?'sd':''}">${esc(s.t)}</span><button class="xb" data-a="sx" data-k="${k}">✕</button></div>`).join('')}</div><input class="si" placeholder="Break into steps - hit enter" maxlength="100"><textarea class="nt" placeholder="Notes">${esc(i.notes||'')}</textarea><button class="fb2" data-a="f">⏱️ Focus on this</button></div>`;
+function card(i){const c=cls(i.cls);return`<div class="card ${i.star?'imp':''} ${i.done?'dn':''}" data-id="${i.id}" style="--cc:${c?`hsl(${c.h} 70% 60%)`:'#d8dbe2'}"><button class="ck ${i.done?'on':''}" data-a="t" aria-label="Complete">${CK}</button><div class="mid"><div class="nm">${esc(i.name)}</div><div class="lb">${c?`<span class="tag" style="${cs(c)}">${esc(c.name)}</span>`:''}${i.due?`<span>${fmt(i.due)}</span>`:''}${i.src==='canvas'?'<span class="tag cv">Canvas</span>':''}</div>${i.ph?`<img class="th" data-a="v" src="${i.ph}" alt="Photo">`:''}${X[i.id]?ex(i):''}</div><div class="act"><button data-a="x" aria-label="Delete">${ic('x')}</button><button data-a="e" aria-label="Edit">${ic('edit')}</button><button data-a="p" aria-label="Photo">${ic('cam')}</button><button class="st ${i.star?'on':''}" data-a="s" aria-label="Important">${ic('star')}</button></div></div>`}
+const ex=i=>`<div class="ex"><div>${(i.steps||[]).map((s,k)=>`<div class="sp"><button class="ck sm ${s.d?'on':''}" data-a="sc" data-k="${k}">${CK}</button><span class="${s.d?'sd':''}">${esc(s.t)}</span><button class="xb" data-a="sx" data-k="${k}">✕</button></div>`).join('')}</div><input class="si" placeholder="Break into steps - hit enter" maxlength="100"><textarea class="nt" placeholder="Notes">${esc(i.notes||'')}</textarea><button class="fb2" data-a="f">${ic('timer')} Focus on this</button></div>`;
 function list(){const t=T(),q=F.q.toLowerCase();
  const a=S.items.filter(i=>{if(F.c&&i.cls!==F.c)return false;if(q&&!i.name.toLowerCase().includes(q))return false;const w=i.due&&i.due>=t.w0&&i.due<t.w1,d=i.due&&i.due>=t.t&&i.due<t.m;return F.f==='todo'?!i.done:F.f==='today'?d:F.f==='week'?w:F.f==='star'?i.star:F.f==='done'?i.done:true}).sort((x,y)=>(x.due??1e16)-(y.due??1e16));
  const g={};a.forEach(i=>(g[grp(i,t)]??=[]).push(i));let h='';
  for(const k of['over','today','tmr','week','later','none'])if(g[k])h+=`<div class="gh">${NAMES[k]} · ${g[k].length}</div>`+g[k].map(card).join('');
- $('#list').innerHTML=h||'<div class="empty">Nothing here yet ✨</div>'}
-function all(){head();next();$('#nx').insertAdjacentHTML('beforeend',S.items.some(i=>!i.done)?'<button class="fb" id="fo">Focus ⏱️</button>':'');ctrl();list()}
-$('#nx').onclick=e=>{if(e.target.id==='fo')focus($('#nx .n').textContent)};
+ $('#list').innerHTML=h||'<div class="empty">Nothing here yet</div>'}
+function all(){head();next();$('#nx').insertAdjacentHTML('beforeend',S.items.some(i=>!i.done)?'<button class="fb" id="fo">'+ic('timer')+'Focus</button>':'');ctrl();list()}
+$('#nx').onclick=e=>{if(e.target.closest('#fo'))focus($('#nx .n').textContent)};
 const FI=document.createElement('input');FI.type='file';FI.accept='image/*';FI.hidden=true;document.body.appendChild(FI);let PT;
 FI.onchange=()=>{const f=FI.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,1000/im.width),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);const i=S.items.find(x=>x.id===PT);if(i){i.ph=c.toDataURL('image/jpeg',.7);save();all()}};im.src=r.result};r.readAsDataURL(f);FI.value=''};
 function view(i){const o=document.createElement('div');o.className='ov';o.innerHTML=`<div style="text-align:center"><img src="${i.ph}" alt="Photo" style="max-width:100%;max-height:70vh;border-radius:18px"><div class="row2" style="justify-content:center"><button class="f" id="vc">Close</button><button class="f" id="vd">Delete photo</button></div></div>`;document.body.appendChild(o);$('#vc').onclick=()=>o.remove();$('#vd').onclick=()=>{delete i.ph;save();o.remove();all()}}
@@ -293,7 +310,7 @@ $('#list').onclick=e=>{const cd=e.target.closest('.card');if(!cd)return;const i=
   save();all();if(i.done){level().l>L0?SFX.lvl():streak()>S0?SFX.str():SFX.check()}else SFX.un();
   if(i.src==='canvas')api({action:'complete',pt:i.pt,pid:i.pid,oid:i.oid,done:i.done}).then(r=>{i.oid=r.oid;save()}).catch(()=>{toast('Canvas sync failed, reverted');i.done=!i.done;i.at=null;i.xp=0;save();all()})}
  else if(a==='s'){i.star=!i.star;save();all()}
- else if(a==='x'){S.items=S.items.filter(x=>x!==i);if(i.src==='canvas')S.hidden.push(i.id);save();all()}
+ else if(a==='x'){const ix=S.items.indexOf(i);S.items.splice(ix,1);if(i.src==='canvas')S.hidden.push(i.id);save();all();undoBar(i,ix)}else if(a==='e')editItem(i)
  else if(a==='p'){PT=i.id;FI.click()}else if(a==='v')view(i)
  else if(a==='sc'){i.steps[k].d=!i.steps[k].d;save();list()}else if(a==='sx'){i.steps.splice(k,1);save();list()}else if(a==='f')focus(i.name)};
 $('#list').onkeydown=e=>{if(e.key==='Enter'&&e.target.classList.contains('si')){const v=e.target.value.trim(),id=e.target.closest('.card').dataset.id,i=S.items.find(x=>x.id===id);if(v&&i){(i.steps=i.steps||[]).push({t:v,d:false});save();list();const n=document.querySelector(`[data-id="${id}"] .si`);n&&n.focus()}}};
@@ -318,10 +335,10 @@ function settings(){const o=document.createElement('div');o.className='ov';const
    $('#ce').textContent='Connecting...';try{await api({action:'verify'},{url:u,token:t});S.cv={url:u,token:t};save();await sync();o.remove()}catch(er){$('#ce').textContent='Could not connect: '+er.message}}}}
 function tour(){S.toured=1;save();let n=0;const st=[['#hi','This is your home base. Your streak and level grow as you finish work.'],['.pills','Finish at least one assignment every day to keep your streak alive.'],['.stats','Your week at a glance: done, due, and progress.'],['#nx','Your most urgent assignment, with a Focus timer to help you start.'],['.add','Add assignments here. Star important ones, and attach a photo from a card.'],['.sr','Search and filter by class, with the buttons below to slice your list.'],['#list','Tap the circle to complete. Tap a card for steps and notes.'],['.top','Replay this tour with ?, mute sounds, and connect Canvas in Settings.']];
  const bl=document.createElement('div'),sp=document.createElement('div'),tc=document.createElement('div');bl.className='blk';sp.className='spot';tc.className='tc';document.body.append(bl,sp,tc);document.body.style.overflow='hidden';
- const end=()=>{bl.remove();sp.remove();tc.remove();document.body.style.overflow=''};
+ const end=()=>{bl.remove();sp.remove();tc.remove();document.body.style.overflow='';setTimeout(a2hs,500)};
  const show=()=>{const el=document.querySelector(st[n][0]);el.scrollIntoView({block:'center'});const r=el.getBoundingClientRect(),p=8,low=r.top+r.height/2>innerHeight/2;
-  Object.assign(sp.style,{top:r.top-p+'px',left:r.left-p+'px',width:r.width+2*p+'px',height:r.height+2*p+'px'});tc.style.top=low?'16px':'auto';tc.style.bottom=low?'auto':'16px';
-  tc.innerHTML=`<div>${st[n][1]}</div><div class="dots">${st.map((_,k)=>`<i class="${k===n?'cur':''}" data-k="${k}"></i>`).join('')}</div><div class="tb2"><button id="tk">Skip</button><span style="flex:1"></span>${n?'<button id="tbk">Back</button>':''}<button id="tn" class="pri">${n===st.length-1?'Done':'Next'}</button></div>`};
+  Object.assign(sp.style,{top:r.top-p+'px',left:r.left-p+'px',width:r.width+2*p+'px',height:r.height+2*p+'px'});
+  tc.innerHTML=`<div>${st[n][1]}</div><div class="dots">${st.map((_,k)=>`<i class="${k===n?'cur':''}" data-k="${k}"></i>`).join('')}</div><div class="tb2"><button id="tk">Skip</button><span style="flex:1"></span>${n?'<button id="tbk">Back</button>':''}<button id="tn" class="pri">${n===st.length-1?'Done':'Next'}</button></div>`;tc.style.bottom='auto';tc.style.top=(low?16:innerHeight-tc.offsetHeight-16)+'px'};
  tc.onclick=e=>{const d=e.target.closest('[data-k]');if(d){n=+d.dataset.k;show();return}const id=e.target.id;if(id==='tn'){if(n===st.length-1)end();else{n++;show()}}else if(id==='tbk'){n--;show()}else if(id==='tk')end()};show()}
 const DL='ABCDEFG',SLOT=['Math lab','Health','PE','Seminar','Health','PE','Learning circles'],CAL={v:'week',sel:sod(Date.now())};
 const isWk=t=>{const g=new Date(t).getDay();return g>0&&g<6};
@@ -333,7 +350,7 @@ function dsched(t){const n=dayN(t),g=new Date(t).getDay();if(!n)return[];const s
 function dayHTML(t){const n=dayN(t),now=new Date(),nm=now.getHours()*60+now.getMinutes(),td=t===sod(Date.now()),its=S.items.filter(i=>i.due&&sod(i.due)===t).sort((a,b)=>a.due-b.due);
  let h=`<div class="gh">${new Date(t).toLocaleDateString([],{weekday:'long',month:'long',day:'numeric'})}${n?' · Day '+n:''}</div>`;
  if(!S.sch||!S.sch.anchor)h+='<div class="cc">Set up your schedule to see your classes here. <button class="f" data-go="1">Set up</button></div>';
- else if(!n)h+='<div class="cc">No school ✨</div>';
+ else if(!n)h+='<div class="cc">No school</div>';
  else h+='<div class="cc">'+dsched(t).map(r=>`<div class="rw ${td&&nm>=r.a&&nm<r.b?'now':''}" style="--cc:${r.c?`hsl(${r.c.h} 70% 60%)`:r.L?'#c9ced8':'transparent'}"><time>${r.tm}</time><span>${esc(r.w)}${r.L&&r.c?`<small> · Block ${r.L}</small>`:''}</span></div>`).join('')+'</div>';
  return h+(its.length?`<div class="gh">Due · ${its.length}</div>`+its.map(card).join(''):'')}
 function calShift(d){const D=new Date(CAL.sel),v=CAL.v;if(!d)CAL.sel=sod(Date.now());else if(v==='day')CAL.sel=addD(CAL.sel,d);else if(v==='week')CAL.sel=addD(CAL.sel,7*d);else{D.setDate(1);D.setMonth(D.getMonth()+d);const t=new Date();CAL.sel=D.getMonth()===t.getMonth()&&D.getFullYear()===t.getFullYear()?sod(Date.now()):sod(D.getTime())}}
@@ -352,7 +369,7 @@ $('#cal').addEventListener('click',e=>{if(e.target.closest('.card')){$('#list').
 $('#cal').onkeydown=$('#list').onkeydown;$('#cal').oninput=$('#list').oninput;
 let sx=0,sy=0;$('#cal').addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
 $('#cal').addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){calShift(dx<0?1:-1);calRender();['#cnn','#cdd'].forEach(s=>{const x=$(s);x.classList.remove('sl');void x.offsetWidth;x.classList.add('sl')})}},{passive:true});
-function showTab(k){$('#hm').hidden=!!k;$('#cal').hidden=!k;document.querySelectorAll('.nav button').forEach((b,j)=>b.classList.toggle('on',j===k));scrollTo(0,0);if(k)calRender()}
+function showTab(k){if(k!==2&&!$('#gp').hidden)closeGame();$('#hm').hidden=k!==0;$('#cal').hidden=k!==1;$('#gm').hidden=k!==2;document.querySelectorAll('.nav button').forEach((b,j)=>b.classList.toggle('on',j===k));scrollTo(0,0);if(k===1)calRender();if(k===2)gamesInit()}
 document.querySelector('.nav').onclick=e=>{const b=e.target.closest('button');if(b)showTab(+b.dataset.k)};$('#hg2').onclick=()=>settings();
 function schMount(r,done,first){const s=S.sch||{blk:{}},n0=dayN(sod(Date.now()))||(s.anchor?s.anchor.n:1),N=[1,2,3,4,5,6,7];
  r.innerHTML=`<p class="mu">Pick a class for each block: one of your Canvas classes, or type your own.</p>${[...DL].map(L=>`<div class="rw2"><span>Block ${L}</span><select data-b="${L}"><option value="">No class</option>${S.classes.map(c=>`<option value="${c.id}"${s.blk[L]===c.id?' selected':''}>${esc(c.name)}</option>`).join('')}<option value="__new">+ Type my own</option></select><input data-i="${L}" placeholder="Class name" maxlength="40" hidden></div>`).join('')}<p class="mu">What day of the rotation is today (or the next school day)?</p><select id="dn" style="width:100%;margin-bottom:10px">${N.map(k=>`<option${k===n0?' selected':''}>${k}</option>`).join('')}</select><button class="addb" id="ss" style="width:100%">Save schedule</button>${first?'<button class="f" id="sk" style="width:100%;margin-top:8px">Skip for now</button>':''}`;
@@ -364,10 +381,40 @@ function openSched(first){const o=document.createElement('div');o.className='ov'
 function confirmDay(){const s=S.sch,t=sod(Date.now());if(!s||!s.anchor||!isWk(t)||s.chk===t)return;if(t-s.anchor.d<3*DAY){s.chk=t;save();return}
  const n=dayN(t),o=document.createElement('div');o.className='ov';o.innerHTML=`<div class="mo"><h2>Is today Day ${n}?</h2><p class="mu">Holidays and breaks can shift the rotation.</p><button class="addb" id="y1" style="width:100%">Yes, Day ${n}</button><p class="mu">Or pick today's day:</p><select id="y2" style="width:100%;margin-bottom:10px">${[1,2,3,4,5,6,7].map(k=>`<option${k===n?' selected':''}>${k}</option>`).join('')}</select><button class="f" id="y3" style="width:100%">Update</button></div>`;document.body.appendChild(o);
  $('#y1').onclick=()=>{s.anchor={d:t,n};s.chk=t;save();o.remove();all()};$('#y3').onclick=()=>{s.anchor={d:t,n:+$('#y2').value};s.chk=t;save();o.remove();all()}}
-const w2=setInterval(()=>{if(document.querySelector('.ov'))return;if(S.sch){clearInterval(w2);confirmDay()}else if(S.asked)openSched(1)},500);
+const w2=setInterval(()=>{if(document.querySelector('.ov'))return;if(S.sch){clearInterval(w2);confirmDay()}else if(S.asked&&!S.cvAsked&&!S.cv)openCanvasStep();else if(S.asked)openSched(1)},500);
 {const _all=all,_list=list,_st=settings;all=function(){_all();calRender()};list=function(){_list();calRender()};settings=function(k){_st();if(typeof k==='number')document.querySelectorAll('.tbn')[k].click()}}
-$('#hq').onclick=tour;$('#hg').onclick=settings;$('#hs').textContent=S.mute?'🔇':'🔊';
-$('#hs').onclick=()=>{S.mute=!S.mute;save();$('#hs').textContent=S.mute?'🔇':'🔊'};
+const IC={home:'<path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/>',cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/>',game:'<path d="M7 7h10a5 5 0 015 5v2a3 3 0 01-5.4 1.8L15 14H9l-1.6 1.8A3 3 0 012 14v-2a5 5 0 015-5z"/><path d="M8 10v3M6.5 11.5h3M16 10.5h.01M18 12.5h.01"/>',gear:'<circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>',spk:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11"/>',spkx:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/>',cam:'<path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',star:'<path d="M12 3l2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 3 1.1-6.2L3 9.7l6.2-.9z"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',timer:'<circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/>',edit:'<path d="M4 20h4L19 9l-4-4L4 16z"/>',back:'<path d="M15 5l-7 7 7 7"/>',full:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>'};
+const ic=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${IC[n]}</svg>`;
+$('#hg').innerHTML=ic('gear');$('#hg2').innerHTML=ic('gear');$('#hg3').innerHTML=ic('gear');$('#hg3').onclick=()=>settings();$('#as').innerHTML=ic('star');
+document.querySelector('.nav').innerHTML=[['home','Home'],['cal','Calendar'],['game','Games']].map(([n,l],k)=>`<button class="${k?'':'on'}" data-k="${k}">${ic(n)}${l}</button>`).join('');
+function undoBar(i,idx){document.querySelectorAll('.ub').forEach(x=>x.remove());const t=document.createElement('div');t.className='toast ub';t.innerHTML='Deleted <button class="ubb">Undo</button>';document.body.appendChild(t);const tm=setTimeout(()=>t.remove(),6000);
+ t.querySelector('button').onclick=()=>{clearTimeout(tm);t.remove();S.items.splice(Math.min(idx,S.items.length),0,i);S.hidden=S.hidden.filter(h=>h!==i.id);save();all()}}
+function editItem(i){const o=document.createElement('div');o.className='ov',dv=i.due?new Date(i.due-new Date(i.due).getTimezoneOffset()*6e4).toISOString().slice(0,16):'';
+ o.innerHTML=`<div class="mo"><h2>Edit assignment</h2><input id="en" maxlength="120" value="${esc(i.name)}"><select id="ec" style="width:100%;margin-bottom:12px"><option value="">No class</option>${S.classes.map(c=>`<option value="${c.id}"${i.cls===c.id?' selected':''}>${esc(c.name)}</option>`).join('')}</select><input id="ed" type="datetime-local" value="${dv}"><button class="addb" id="es" style="width:100%">Save</button><button class="f" id="ee" style="width:100%;margin-top:8px">Cancel</button></div>`;document.body.appendChild(o);
+ $('#ee').onclick=()=>o.remove();$('#es').onclick=()=>{const n=$('#en').value.trim();if(!n){$('#en').focus();return}i.name=n;i.cls=$('#ec').value;i.due=$('#ed').value?new Date($('#ed').value).getTime():null;if(i.src==='canvas')i.ed=1;save();o.remove();all()}}
+function openCanvasStep(){const o=document.createElement('div');o.className='ov';
+ o.innerHTML=`<div class="mo"><h2>Connect Canvas</h2><p class="mu">Connecting brings in your classes and assignments. You can skip this and do it later in Settings.</p><select id="fsc" style="width:100%;margin-bottom:8px"><option value="">My school isn't listed</option>${SCHOOLS.map(s=>`<option value="${s[1]}">${esc(s[0])}</option>`).join('')}</select><input id="fcu" placeholder="school.instructure.com"><input id="fct" type="password" placeholder="Paste access token"><div class="mu" style="line-height:1.5">How to get your token:<br>1. Open the Canvas <u>website</u> in your browser (not the Canvas app).<br>2. Tap Account, then Settings.<br>3. Scroll to Approved Integrations and tap + New Access Token.<br>4. Name it anything, tap Generate Token, and copy it.</div><p class="mu" id="fce"></p><button class="addb" id="fcc" style="width:100%">Connect</button><button class="f" id="fsk" style="width:100%;margin-top:8px">Skip for now</button></div>`;document.body.appendChild(o);
+ $('#fsc').onchange=e=>{if(e.target.value)$('#fcu').value=e.target.value};$('#fsk').onclick=()=>{S.cvAsked=1;save();o.remove()};
+ $('#fcc').onclick=async()=>{let u=$('#fcu').value.trim();const t=$('#fct').value.trim();if(!u||!t){$('#fce').textContent='Add your school and token, or skip';return}try{u=new URL(/^https?:/.test(u)?u:'https://'+u).origin}catch(er){$('#fce').textContent='Check the URL';return}
+  $('#fce').textContent='Connecting...';try{await api({action:'verify'},{url:u,token:t});S.cv={url:u,token:t};S.cvAsked=1;save();await sync();o.remove()}catch(er){$('#fce').textContent='Could not connect: '+er.message}}}
+let DIP;addEventListener('beforeinstallprompt',e=>{e.preventDefault();DIP=e});
+const standalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true,isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+function a2hs(){if(standalone()||document.querySelector('.ov,.blk'))return;const o=document.createElement('div');o.className='ov';
+ o.innerHTML=`<div class="mo"><h2>Add to Home Screen</h2><p class="mu" style="line-height:1.5">${DIP?'Install this app so it opens like a normal app, full screen.':isIOS?'Tap the Share button in Safari, scroll down, and tap Add to Home Screen.':'Open your browser menu and choose Add to Home Screen or Install app.'}</p>${DIP?'<button class="addb" id="ai" style="width:100%">Install</button>':''}<button class="f" id="an2" style="width:100%;margin-top:8px">Not now</button></div>`;document.body.appendChild(o);
+ $('#an2').onclick=()=>o.remove();if(DIP)$('#ai').onclick=()=>{o.remove();DIP.prompt();DIP=null}}
+setTimeout(()=>{if(S.toured&&S.sch&&Math.random()<.2)a2hs()},3000);
+let GL,GC;
+async function gamesInit(){if(GL)return;try{GL=await (await fetch('/games/games.json')).json()}catch(e){GL=[]}
+ $('#ggl').innerHTML=GL.length?GL.map((g,k)=>{const f='/games/'+g.folder+'/',c=(g.icon?[f+g.icon]:[]).concat(['png','jpg','jpeg','webp'].map(x=>f+g.folder+'icon.'+x),['png','jpg','jpeg','webp'].map(x=>f+'icon.'+x));return`<button class="gc" data-g="${k}"><span class="gi"><img alt="" src="${c[0]}" data-c='${JSON.stringify(c)}'></span><b>${esc(g.name)}</b></button>`}).join(''):'<div class="empty">No games yet</div>';
+ document.querySelectorAll('#ggl img').forEach(im=>{const c=JSON.parse(im.dataset.c);let k=0;im.onerror=()=>{if(++k<c.length)im.src=c[k];else{im.onerror=null;im.replaceWith(Object.assign(document.createElement('span'),{className:'gph',innerHTML:ic('game')}))}}})}
+function gfs(on){const b=$('#gbox');b.classList.toggle('fs',!!on);$('#gx').hidden=!on;document.body.style.overflow=on?'hidden':'';if(on){if(b.requestFullscreen)b.requestFullscreen().catch(()=>{})}else if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
+function closeGame(){gfs(0);$('#gf').src='about:blank';$('#gp').hidden=true;$('#ggl').hidden=false}
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&$('#gbox').classList.contains('fs'))gfs(0)});
+$('#ggl').onclick=e=>{const b=e.target.closest('[data-g]');if(!b)return;const g=GL[+b.dataset.g],u='/games/'+g.folder+'/';GC=g;$('#ggl').hidden=true;$('#gp').hidden=false;$('#gt').textContent=g.name;$('#gfp').href=u;$('#gf').src=u;scrollTo(0,0)};
+$('#gp').onclick=e=>{const b=e.target.closest('button');if(!b)return;if(b.id==='gb')closeGame();else if(b.id==='gfs')gfs(1);else if(b.id==='gx')gfs(0)};
+$('#gb').innerHTML=ic('back')+'Back';$('#gfs').innerHTML=ic('full')+'Fullscreen';$('#gx').innerHTML=ic('x');
+$('#hq').onclick=tour;$('#hg').onclick=settings;$('#hs').innerHTML=ic(S.mute?'spkx':'spk');
+$('#hs').onclick=()=>{S.mute=!S.mute;save();$('#hs').innerHTML=ic(S.mute?'spkx':'spk')};
 if(!S.toured){const w=setInterval(()=>{if(!document.querySelector('.ov')&&S.sch){clearInterval(w);tour()}},400)}
 theme();all();if(S.cv)sync();
 </script></body></html>
